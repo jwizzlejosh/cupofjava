@@ -1,4 +1,4 @@
-# Cup of Java
+# Cup of Java - A Simple To Do App
 This app was made following the tutorial by Ashwin Joy from *Pythonista Planet* [found here.](https://pythonistaplanet.com/to-do-list-app-using-django/?expand_article=1) using Django and Python.
 
 ## Description
