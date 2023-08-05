@@ -1,14 +1,37 @@
-<h1>My To Do List</h1> 
-<form action="/addTodoItem/" method = "post">{% csrf_token %}
-    <input type="text" name="content">
-    <input type="submit" value="Add Todo Item">
-</form> 
-<ul>
-    {% for i in all_items %} 
-    <li>{{i.content}}
-        <form action="/deleteTodoItem/{{i.id}}/" method = "post">{% csrf_token %}
-            <input type="submit" value="Delete">
-        </form>  
-    </li>
-    {% endfor %}
-</ul> 
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>To Do List</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+	</head>
+
+    <body>
+        <div class="container">
+            <div id="myDIV" class="header">
+                <h1>Cup of Java</h1> 
+                <form action="/addTodoItem/" method = "post">{% csrf_token %}
+                    <input type="text" name="content" placeholder="New Task...">
+                    <input type="submit" class="addBtn" value="Add">
+                </form> 
+            </div>
+
+            <ul id="myUL" class ="listitems">
+                    {% for i in all_items %} 
+                    <li> {{i.content}}
+                        <form action="/deleteTodoItem/{{i.id}}/" method = "post">{% csrf_token %}
+                            <input type="submit" class="deleteBtn" value="X">
+                        </form>
+                        <hr>
+                    </li>
+                    {% endfor %}
+            </ul>
+            <div class="smalltext">
+                <small> by: Joshua Shiman </small>
+            </div>
+        </div> 
+    </body>
+
+</html>

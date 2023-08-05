@@ -1,0 +1,135 @@
+body {
+  background: url('/static/img/background.png');
+  background-color: #f8f3eb;
+  font-family: verdana;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+hr {
+  display: block;
+  height: 0px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 12px;
+  padding: 1px;
+}
+
+.container {
+  width: 400px; /* Set your desired width */
+  height: 600px; /* Set your desired height */
+  border: 1px solid #ddd;
+  background-color: #f8f3eb;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Style the list items */
+.listitems {
+  list-style-type: none;
+  padding: 12px;
+  overflow-y: auto;
+  max-height: 350px; /* Adjust this value based on your container's height */
+}
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px;
+    min-height: 12px;
+    background: #f8f3eb;
+    text-align: left;
+    font-size: 16px;
+    transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #f8f3eb;
+  color: #aa7c60;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+/* Style the "Delete" button */
+.deleteBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  width: 12%;
+  background: #aa7c60;
+  color: #f8f3eb;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.deleteBtn:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  padding: 30px 40px;
+  background-color: #775641;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.smalltext {
+  text-align: right;
+  padding: 12px;
+}
